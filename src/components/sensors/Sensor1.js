@@ -16,9 +16,9 @@ const Sensor1 = ({room}) => {
     const fetchData = async () => {
         try {
 
-            const secret_token = {
-                "secret_token": "@WelcomeFromHere@"
-            };
+            // const secret_token = {
+            //     "secret_token": "@WelcomeFromHere@"
+            // };
 
             const response = await fetch(url, {mode:'cors'});
 
