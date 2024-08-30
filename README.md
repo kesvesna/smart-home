@@ -1,4 +1,6 @@
-# Smart home for landlord
+# Smart home monitoring for landlord
+
+At this moment only HTTP
 
 ## Functions
 
