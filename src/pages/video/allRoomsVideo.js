@@ -6,10 +6,10 @@ const AllRoomsVideo = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-4">
+                <div className="col">
                     <KitchenVideo />
                 </div>
-                <div className="col-4">
+                <div className="col">
                     <Room5Video />
                 </div>
             </div>

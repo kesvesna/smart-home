@@ -8,7 +8,7 @@ const Sensor1 = ({room}) => {
     const url = process.env.REACT_APP_SENSOR_1_URL;
     const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
     const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID; // Flat_42
-    const HIGH_TEMPERATURE_ALARM = 25;
+    const HIGH_TEMPERATURE_ALARM = 30;
     const HIGH_GAS_LEVEL_ALARM = 950;
     const LOW_HUMIDITY_LEVEL_ALARM = 40;
     const LOW_PRESSURE_LEVEL_ALARM = 740;

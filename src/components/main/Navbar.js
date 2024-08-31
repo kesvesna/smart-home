@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link} from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -6,7 +7,7 @@ const Navbar = () => {
             <div className="container">
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand fw-bold fs-4" href="/">Квартира 42</a>
+                    <Link className="navbar-brand fw-bold fs-4" to={"/"}>Квартира 42</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -20,23 +21,33 @@ const Navbar = () => {
                                     График уборки
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/duty/room_1">Комната 1</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/duty/room_1"}>Комната 1</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/duty/room_2">Комната 2</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/duty/room_2"}>Комната 2</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/duty/room_3">Комната 3</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/duty/room_3"}>Комната 3</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/duty/room_4">Комната 4</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/duty/room_4"}>Комната 4</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/duty/room_5">Комната 5</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/duty/room_5"}>Комната 5</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -45,11 +56,15 @@ const Navbar = () => {
                                     Памятки
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/memo/tenant">Жильца</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/memo/tenant"}>Жильца</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/memo/duty">Дежурного</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/memo/duty"}>Дежурного</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -58,7 +73,8 @@ const Navbar = () => {
                                     Мытье
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/washing/shower_cabin">Душевая кабинка</a>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/washing/shower_cabin"}>Душевая кабинка</Link>
                                     </li>
                                 </ul>
                             </li>
@@ -68,11 +84,15 @@ const Navbar = () => {
                                     Хранение
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/storage/things">Вещи</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/storage/things"}>Вещи</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/storage/shoes">Обувь</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/storage/shoes"}>Обувь</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -81,13 +101,15 @@ const Navbar = () => {
                                     Стирка
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/user_files/KitchenWashingMachineBeko.pdf">На
-                                        кухне</a></li>
+                                    <li>
+                                        <a className="dropdown-item" href="/user_files/ShowerRoomWashingMachineKraft.pdf">В душевой</a>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item"
-                                           href="/user_files/ShowerRoomWashingMachineKraft.pdf">В душевой</a></li>
+                                    <li>
+                                        <a className="dropdown-item" href="/user_files/KitchenWashingMachineBeko.pdf">На кухне</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item dropdown">
@@ -96,19 +118,25 @@ const Navbar = () => {
                                     Видео
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/video/all_rooms">Все помещения</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/video/all_rooms"}>Все помещения</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/video/kitchen">Кухня</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/video/kitchen"}>Кухня</Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
-                                    <li><a className="dropdown-item" href="/video/room_5">Комната 5</a></li>
+                                    <li>
+                                        <Link className="dropdown-item" to={"/video/room_5"}>Комната 5</Link>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/health/first_aid_kit">Аптечка</a>
+                                <Link className="nav-link" to={"/health/first_aid_kit"}>Аптечка</Link>
                             </li>
                         </ul>
                     </div>
