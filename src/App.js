@@ -24,10 +24,13 @@ import Room5Climate from "./pages/climate/Room5Climate";
 import AllRoomsVideo from "./pages/video/allRoomsVideo";
 import KitchenVideo from "./pages/video/KitchenVideo";
 import Room5Video from "./pages/video/Room5Video";
+import ElectricalPanel from "./pages/power_supply/ElectricalPanel";
+import Reasons from "./pages/fines/Reasons";
+import Why from "./pages/fines/Why";
 function App() {
   return (
       <>
-        <BrowserRouter basename={"/Site/"}>
+        <BrowserRouter>
             <Navbar />
           <Routes>
               <Route path={"/"} exact element={<Home />} />
@@ -44,6 +47,7 @@ function App() {
               <Route path={"/storage/things"} element={<Things />} />
               <Route path={"/storage/shoes"} element={<Shoes />} />
               <Route path={"/washing/shower_cabin"} element={<ShowerCabin />} />
+              <Route path={"/power_supply/electrical_panel"} element={<ElectricalPanel />} />
               <Route path={"/health/first_aid_kit"} element={<FirstAidKit />} />
               <Route path={"/climate/all_rooms"} element={<AllRoomsClimate />} />
               <Route path={"/climate/kitchen"} element={<KitchenClimate />} />
@@ -51,6 +55,8 @@ function App() {
               <Route path={"/video/all_rooms"} element={<AllRoomsVideo />} />
               <Route path={"/video/kitchen"} element={<KitchenVideo />} />
               <Route path={"/video/room_5"} element={<Room5Video />} />
+              <Route path={"/fines/reasons"} element={<Reasons />} />
+              <Route path={"/fines/why"} element={<Why />} />
               <Route path={"/dashboard"} component={<PrivateRoute />} />
               <Route path={"*"} element={<NotFound />} />
           </Routes>

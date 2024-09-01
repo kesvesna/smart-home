@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -7,7 +7,7 @@ const Navbar = () => {
             <div className="container">
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                    <Link className="navbar-brand fw-bold fs-4" to={"/"}>Квартира 42</Link>
+                    <NavLink className="navbar-brand fw-bold fs-4 active-link" to={"/"}>Квартира 42</NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -22,31 +22,48 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <Link className="dropdown-item" to={"/duty/room_1"}>Комната 1</Link>
+                                        <NavLink className="dropdown-item" to={"/duty/room_1"}>Комната 1</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/duty/room_2"}>Комната 2</Link>
+                                        <NavLink className="dropdown-item" to={"/duty/room_2"}>Комната 2</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/duty/room_3"}>Комната 3</Link>
+                                        <NavLink className="dropdown-item" to={"/duty/room_3"}>Комната 3</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/duty/room_4"}>Комната 4</Link>
+                                        <NavLink className="dropdown-item" to={"/duty/room_4"}>Комната 4</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/duty/room_5"}>Комната 5</Link>
+                                        <NavLink className="dropdown-item" to={"/duty/room_5"}>Комната 5</NavLink>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Штрафы
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/fines/reasons"}>За что</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/fines/why"}>Почему</NavLink>
                                     </li>
                                 </ul>
                             </li>
@@ -57,13 +74,13 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <Link className="dropdown-item" to={"/memo/tenant"}>Жильца</Link>
+                                        <NavLink className="dropdown-item" to={"/memo/tenant"}>Жильца</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/memo/duty"}>Дежурного</Link>
+                                        <NavLink className="dropdown-item" to={"/memo/duty"}>Дежурного</NavLink>
                                     </li>
                                 </ul>
                             </li>
@@ -74,7 +91,8 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <Link className="dropdown-item" to={"/washing/shower_cabin"}>Душевая кабинка</Link>
+                                        <NavLink className="dropdown-item" to={"/washing/shower_cabin"}>Душевая
+                                            кабинка</NavLink>
                                     </li>
                                 </ul>
                             </li>
@@ -85,13 +103,13 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <Link className="dropdown-item" to={"/storage/things"}>Вещи</Link>
+                                        <NavLink className="dropdown-item" to={"/storage/things"}>Вещи</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/storage/shoes"}>Обувь</Link>
+                                        <NavLink className="dropdown-item" to={"/storage/shoes"}>Обувь</NavLink>
                                     </li>
                                 </ul>
                             </li>
@@ -102,13 +120,15 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <a className="dropdown-item" href="/user_files/ShowerRoomWashingMachineKraft.pdf">В душевой</a>
+                                        <a className="dropdown-item"
+                                           href="/user_files/ShowerRoomWashingMachineKraft.pdf">В душевой</a>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="/user_files/KitchenWashingMachineBeko.pdf">На кухне</a>
+                                        <a className="dropdown-item" href="/user_files/KitchenWashingMachineBeko.pdf">На
+                                            кухне</a>
                                     </li>
                                 </ul>
                             </li>
@@ -119,24 +139,29 @@ const Navbar = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <Link className="dropdown-item" to={"/video/all_rooms"}>Все помещения</Link>
+                                        <NavLink className="dropdown-item" to={"/video/all_rooms"}>Все
+                                            помещения</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/video/kitchen"}>Кухня</Link>
+                                        <NavLink className="dropdown-item" to={"/video/kitchen"}>Кухня</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <Link className="dropdown-item" to={"/video/room_5"}>Комната 5</Link>
+                                        <NavLink className="dropdown-item" to={"/video/room_5"}>Комната 5</NavLink>
                                     </li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/health/first_aid_kit"}>Аптечка</Link>
+                                <NavLink className="nav-link "
+                                         to={"/power_supply/electrical_panel"}>Электрощит</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to={"/health/first_aid_kit"}>Аптечка</NavLink>
                             </li>
                         </ul>
                     </div>

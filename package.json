@@ -2,7 +2,7 @@
   "name": "smart-home",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://5.16.20.15:62000/Site/",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

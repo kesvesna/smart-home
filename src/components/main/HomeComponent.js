@@ -23,10 +23,10 @@ const HomeComponent = () => {
                 Входную дверь открывать запрещено
             </div>
             <div className="alert alert-info" role="alert">
-                Более подробная инфа в памятках
+                Лучше лишний раз спросить
             </div>
             <div className="alert alert-info" role="alert">
-                Просьбы, жалобы, предложения пишите в личку
+                Более подробная инфа в памятках
             </div>
         </div>
     );
