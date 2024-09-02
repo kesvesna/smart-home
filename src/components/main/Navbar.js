@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
 import Logout from '../../pages/auth/Logout'
+import {useAuth} from "../../contexts/AuthContext";
+const Navbar = () => {
 
-const Navbar = ({ auth, user, setAuth }) => {
+    const { auth } = useAuth();
 
     return (
         <>
@@ -134,30 +136,6 @@ const Navbar = ({ auth, user, setAuth }) => {
                                     </li>
                                 </ul>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
-                                    Видео
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li>
-                                        <NavLink className="dropdown-item" to={"/video/all_rooms"}>Все
-                                            помещения</NavLink>
-                                    </li>
-                                    <li>
-                                        <hr className="dropdown-divider"/>
-                                    </li>
-                                    <li>
-                                        <NavLink className="dropdown-item" to={"/video/kitchen"}>Кухня</NavLink>
-                                    </li>
-                                    <li>
-                                        <hr className="dropdown-divider"/>
-                                    </li>
-                                    <li>
-                                        <NavLink className="dropdown-item" to={"/video/room_5"}>Комната 5</NavLink>
-                                    </li>
-                                </ul>
-                            </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link "
                                          to={"/power_supply/electrical_panel"}>Электрощит</NavLink>
@@ -165,14 +143,64 @@ const Navbar = ({ auth, user, setAuth }) => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to={"/health/first_aid_kit"}>Аптечка</NavLink>
                             </li>
-                            {auth != null ?
-                                <li className="nav-item">
-                                    <div className="nav-link"><Logout setAuth={setAuth}/></div>
-                                </li>
+                            {auth ? (
+                                    <div>
+                                        <li className="nav-item dropdown">
+                                            <a className="nav-link dropdown-toggle" href="#" role="button"
+                                               data-bs-toggle="dropdown"
+                                               aria-expanded="false">
+                                                Видео
+                                            </a>
+                                            <ul className="dropdown-menu">
+                                                <li>
+                                                    <NavLink className="dropdown-item" to={"/video/all_rooms"}>Все
+                                                        помещения</NavLink>
+                                                </li>
+                                                <li>
+                                                    <hr className="dropdown-divider"/>
+                                                </li>
+                                                <li>
+                                                    <NavLink className="dropdown-item" to={"/video/kitchen"}>Кухня</NavLink>
+                                                </li>
+                                                <li>
+                                                    <hr className="dropdown-divider"/>
+                                                </li>
+                                                <li>
+                                                    <NavLink className="dropdown-item" to={"/video/room_5"}>Комната 5</NavLink>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li className="nav-item dropdown">
+                                            <a className="nav-link dropdown-toggle" href="#" role="button"
+                                               data-bs-toggle="dropdown"
+                                               aria-expanded="false">
+                                                Пользователи
+                                            </a>
+                                            <ul className="dropdown-menu">
+                                                <li>
+                                                    <NavLink className="dropdown-item" to={"/users/add"}>Добавить</NavLink>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                )
+
                                 :
-                                <li className="nav-item">
+                                (
+                                    ''
+                                )
+                            }
+                            {auth ? (
+                                    <li className="nav-item">
+                                        <div className="nav-link"><Logout /></div>
+                                    </li>
+                                )
+                                :
+                                (
+                                    <li className="nav-item">
                                     <NavLink className="nav-link" to={"/login"}>Войти</NavLink>
                                 </li>
+                                )
                             }
 
                         </ul>

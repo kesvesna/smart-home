@@ -1,14 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Logout = ({ setAuth }) => {
+const Logout = () => {
 
     const navigate = useNavigate();
     const handleLogout = () => {
-        setAuth(null);
         localStorage.removeItem('accessToken');
-        localStorage.removeItem('user');
-        navigate('/login');
+        localStorage.removeItem('username');
+        navigate('/');
     };
 
     return (

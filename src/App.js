@@ -27,21 +27,19 @@ import ElectricalPanel from "./pages/power_supply/ElectricalPanel";
 import Reasons from "./pages/fines/Reasons";
 import Why from "./pages/fines/Why";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import {AuthProvider} from '../src/contexts/AuthContext';
 
 function App() {
-
-    const [auth, setAuth] = useState(false);
-    const [user, setUser] = useState('');
 
 
   return (
       <>
+          <AuthProvider>
           <BrowserRouter>
-              <Navbar auth={auth} user={user} setAuth={setAuth}/>
+              <Navbar/>
               <Routes>
                   <Route path={"/"} exact element={<Home/>}/>
-                  <Route path={"/login"} element={<Login setAuth={setAuth} setUser={setUser}/>}/>
-                  <Route path={"/register"} element={<Register/>}/>
+                  <Route path={"/login"} element={<Login/>}/>
                   <Route path={"/password-reset"} element={<PasswordReset/>}/>
                   <Route path={"/duty/room_1"} element={<Room1 roomNumber={1}/>}/>
                   <Route path={"/duty/room_2"} element={<Room2 roomNumber={2}/>}/>
@@ -58,15 +56,19 @@ function App() {
                   <Route path={"/climate/all_rooms"} element={<AllRoomsClimate/>}/>
                   <Route path={"/climate/kitchen"} element={<KitchenClimate/>}/>
                   <Route path={"/climate/room_5"} element={<Room5Climate/>}/>
-                  {/*<Route path={"/video/all_rooms"} element={<AllRoomsVideo/>}/>*/}
-                  <Route path={"/video/kitchen"} element={<KitchenVideo/>}/>
-                  <Route path={"/video/room_5"} element={<Room5Video/>}/>
+
                   <Route path={"/fines/reasons"} element={<Reasons/>}/>
                   <Route path={"/fines/why"} element={<Why/>}/>
-                  <Route path={"/video/all_rooms"} component={<ProtectedRoute component={AllRoomsVideo} />} />
+
+                  <Route path={"/video/all_rooms"} element={<ProtectedRoute component={AllRoomsVideo}/>} />
+                  <Route path={"/video/kitchen"} element={<ProtectedRoute component={KitchenVideo}/>} />
+                  <Route path={"/video/room_5"} element={<ProtectedRoute component={Room5Video}/>} />
+                  <Route path={"/users/add"} element={<ProtectedRoute component={Register}/>} />
+
                   <Route path={"*"} element={<NotFound/>}/>
               </Routes>
           </BrowserRouter>
+          </AuthProvider>
       </>
   );
 }

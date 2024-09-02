@@ -1,18 +1,13 @@
 import React, { useContext } from 'react';
-import { Route, Navigate } from 'react-router-dom';
+import { Route, Navigate, Routes } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 
 const ProtectedRoute = ({ component: Component, ...rest }) => {
-    const { auth } = useContext(AuthContext) || {};
-    if (!auth) {
-        console.log('Auth: ', auth);
-    }
+
+    const { auth } = useContext(AuthContext) || false;
 
     return (
-        <Route
-            {...rest}
-            element={auth ? <Component /> : <Navigate to="/login" />}
-        />
+        auth === true ? <Component /> : <Navigate to="/" />
     );
 };
 
