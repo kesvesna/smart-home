@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './pages/main/Home';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import PasswordReset from './pages/auth/PasswordReset';
-import PrivateRoute from './components/auth/PrivateRoute';
 import NotFound from "./pages/errors/NotFound";
 import Room1 from "./pages/duty/Room1";
 import Room2 from "./pages/duty/Room2";
@@ -27,40 +26,47 @@ import Room5Video from "./pages/video/Room5Video";
 import ElectricalPanel from "./pages/power_supply/ElectricalPanel";
 import Reasons from "./pages/fines/Reasons";
 import Why from "./pages/fines/Why";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
+
 function App() {
+
+    const [auth, setAuth] = useState(false);
+    const [user, setUser] = useState('');
+
+
   return (
       <>
-        <BrowserRouter>
-            <Navbar />
-          <Routes>
-              <Route path={"/"} exact element={<Home />} />
-              <Route path={"/login"} element={<Login />} />
-              <Route path={"/register"} element={<Register />} />
-              <Route path={"/password-reset"} element={<PasswordReset />} />
-              <Route path={"/duty/room_1"} element={<Room1 roomNumber={1} />} />
-              <Route path={"/duty/room_2"} element={<Room2 roomNumber={2} />} />
-              <Route path={"/duty/room_3"} element={<Room3 roomNumber={3} />} />
-              <Route path={"/duty/room_4"} element={<Room4 roomNumber={4} />} />
-              <Route path={"/duty/room_5"} element={<Room5 roomNumber={5} />} />
-              <Route path={"/memo/tenant"} element={<Tenant />} />
-              <Route path={"/memo/duty"} element={<Duty />} />
-              <Route path={"/storage/things"} element={<Things />} />
-              <Route path={"/storage/shoes"} element={<Shoes />} />
-              <Route path={"/washing/shower_cabin"} element={<ShowerCabin />} />
-              <Route path={"/power_supply/electrical_panel"} element={<ElectricalPanel />} />
-              <Route path={"/health/first_aid_kit"} element={<FirstAidKit />} />
-              <Route path={"/climate/all_rooms"} element={<AllRoomsClimate />} />
-              <Route path={"/climate/kitchen"} element={<KitchenClimate />} />
-              <Route path={"/climate/room_5"} element={<Room5Climate />} />
-              <Route path={"/video/all_rooms"} element={<AllRoomsVideo />} />
-              <Route path={"/video/kitchen"} element={<KitchenVideo />} />
-              <Route path={"/video/room_5"} element={<Room5Video />} />
-              <Route path={"/fines/reasons"} element={<Reasons />} />
-              <Route path={"/fines/why"} element={<Why />} />
-              <Route path={"/dashboard"} component={<PrivateRoute />} />
-              <Route path={"*"} element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+          <BrowserRouter>
+              <Navbar auth={auth} user={user} setAuth={setAuth}/>
+              <Routes>
+                  <Route path={"/"} exact element={<Home/>}/>
+                  <Route path={"/login"} element={<Login setAuth={setAuth} setUser={setUser}/>}/>
+                  <Route path={"/register"} element={<Register/>}/>
+                  <Route path={"/password-reset"} element={<PasswordReset/>}/>
+                  <Route path={"/duty/room_1"} element={<Room1 roomNumber={1}/>}/>
+                  <Route path={"/duty/room_2"} element={<Room2 roomNumber={2}/>}/>
+                  <Route path={"/duty/room_3"} element={<Room3 roomNumber={3}/>}/>
+                  <Route path={"/duty/room_4"} element={<Room4 roomNumber={4}/>}/>
+                  <Route path={"/duty/room_5"} element={<Room5 roomNumber={5}/>}/>
+                  <Route path={"/memo/tenant"} element={<Tenant/>}/>
+                  <Route path={"/memo/duty"} element={<Duty/>}/>
+                  <Route path={"/storage/things"} element={<Things/>}/>
+                  <Route path={"/storage/shoes"} element={<Shoes/>}/>
+                  <Route path={"/washing/shower_cabin"} element={<ShowerCabin/>}/>
+                  <Route path={"/power_supply/electrical_panel"} element={<ElectricalPanel/>}/>
+                  <Route path={"/health/first_aid_kit"} element={<FirstAidKit/>}/>
+                  <Route path={"/climate/all_rooms"} element={<AllRoomsClimate/>}/>
+                  <Route path={"/climate/kitchen"} element={<KitchenClimate/>}/>
+                  <Route path={"/climate/room_5"} element={<Room5Climate/>}/>
+                  {/*<Route path={"/video/all_rooms"} element={<AllRoomsVideo/>}/>*/}
+                  <Route path={"/video/kitchen"} element={<KitchenVideo/>}/>
+                  <Route path={"/video/room_5"} element={<Room5Video/>}/>
+                  <Route path={"/fines/reasons"} element={<Reasons/>}/>
+                  <Route path={"/fines/why"} element={<Why/>}/>
+                  <Route path={"/video/all_rooms"} component={<ProtectedRoute component={AllRoomsVideo} />} />
+                  <Route path={"*"} element={<NotFound/>}/>
+              </Routes>
+          </BrowserRouter>
       </>
   );
 }

@@ -1,10 +1,46 @@
-import React from "react";
 
-const Login = () => {
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const API_URL = 'http://localhost:5000/';
+
+const Login = ({ setAuth, setUser }) => {
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(API_URL + 'login', { username, password });
+            setAuth(response.data.accessToken);
+            setUser(response.data.username);
+            localStorage.setItem('accessToken', response.data.accessToken);
+            localStorage.setItem('username', response.data.username);
+        } catch (error) {
+            console.error("Login failed", error);
+        }
+    };
+
     return (
-        <>
-            <p>Login page</p>
-        </>
+        <div className="container mt-3">
+        <form onSubmit={handleLogin}>
+            <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Username"
+            />
+            <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Password"
+            />
+            <button type="submit">Login</button>
+        </form>
+        </div>
     );
 };
 

@@ -9,6 +9,7 @@ const Room5Video = () => {
         <div className="container">
             <div className="card mt-2" style={{width: "30rem"}}>
                 <div className="card-body">
+                    <p>В разработке</p>
                     <h4 className="card-title">Комната 5:</h4>
                     <Sensor1 room={"Кухня"}/>
                     <Camera1/>

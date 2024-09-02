@@ -32,7 +32,6 @@ export const dutyCalculate = (roomNumber) => {
         roomDutyWeeks.push({"week": {"startDate": begin, "finishDate": end, "index":i}});
     }
 
-    console.log('result: ', roomDutyWeeks);
     return roomDutyWeeks;
 };
 

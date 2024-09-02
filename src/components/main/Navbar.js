@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import Logout from '../../pages/auth/Logout'
 
-const Navbar = () => {
+const Navbar = ({ auth, user, setAuth }) => {
+
     return (
         <>
             <div className="container">
@@ -163,6 +165,16 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to={"/health/first_aid_kit"}>Аптечка</NavLink>
                             </li>
+                            {auth != null ?
+                                <li className="nav-item">
+                                    <div className="nav-link"><Logout setAuth={setAuth}/></div>
+                                </li>
+                                :
+                                <li className="nav-item">
+                                    <NavLink className="nav-link" to={"/login"}>Войти</NavLink>
+                                </li>
+                            }
+
                         </ul>
                     </div>
                 </div>

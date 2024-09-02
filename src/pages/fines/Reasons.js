@@ -16,7 +16,7 @@ const Reasons = () => {
                 <li className="list-group-item">Утром на столе вчерашняя еда или мусор</li>
                 <li className="list-group-item">Свалка на балконе</li>
                 <li className="list-group-item">Просрочка платежа без уведомления арендодателя, увеличение платы
-                    навсегда
+                    на весь срок проживания
                 </li>
                 <li className="list-group-item">Гость после 22:00</li>
                 <li className="list-group-item">Оскорбление жильцов</li>
