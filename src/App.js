@@ -27,10 +27,11 @@ import ElectricalPanel from "./pages/power_supply/ElectricalPanel";
 import Reasons from "./pages/fines/Reasons";
 import Why from "./pages/fines/Why";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import {AuthProvider} from '../src/contexts/AuthContext';
+import {AuthProvider, useAuth} from "./contexts/AuthContext";
+import Logout from "./pages/auth/Logout";
+
 
 function App() {
-
 
   return (
       <>
@@ -60,10 +61,12 @@ function App() {
                   <Route path={"/fines/reasons"} element={<Reasons/>}/>
                   <Route path={"/fines/why"} element={<Why/>}/>
 
+
                   <Route path={"/video/all_rooms"} element={<ProtectedRoute component={AllRoomsVideo}/>} />
                   <Route path={"/video/kitchen"} element={<ProtectedRoute component={KitchenVideo}/>} />
                   <Route path={"/video/room_5"} element={<ProtectedRoute component={Room5Video}/>} />
                   <Route path={"/users/add"} element={<ProtectedRoute component={Register}/>} />
+                  <Route path={"/logout"} element={<ProtectedRoute component={Logout}/>} />
 
                   <Route path={"*"} element={<NotFound/>}/>
               </Routes>

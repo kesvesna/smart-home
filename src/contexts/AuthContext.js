@@ -9,11 +9,11 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         setAuth(!!localStorage.getItem('accessToken'));
-    }, []);
+    }, [auth]);
 
     const logout = () => {
         localStorage.removeItem('accessToken');
-        localStorage.removeItem('user');
+        localStorage.removeItem('username');
         setAuth(false);
     };
 
@@ -27,3 +27,4 @@ export const AuthProvider = ({ children }) => {
 export const useAuth = () => {
     return useContext(AuthContext);
 };
+

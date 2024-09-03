@@ -1,17 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import {useAuth} from "../../contexts/AuthContext";
 
 const Logout = () => {
 
     const navigate = useNavigate();
-    const handleLogout = () => {
+    const {auth} = useAuth();
+
+    useEffect(() => {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('username');
         navigate('/');
-    };
+    }, [auth]);
 
     return (
-        <button className="btn btn-sm btn-primary" onClick={handleLogout}>Выйти</button>
+        <>
+        </>
     );
 };
 

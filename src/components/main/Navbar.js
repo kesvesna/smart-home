@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { NavLink } from "react-router-dom";
-import Logout from '../../pages/auth/Logout'
 import {useAuth} from "../../contexts/AuthContext";
+
 const Navbar = () => {
 
-    const { auth } = useAuth();
+    const { auth, setAuth } = useAuth();
+
+    console.log('auth: ', auth);
+
+    const handleLogout = () => {
+        localStorage.removeItem('accessToken');
+        localStorage.removeItem('username');
+        setAuth(false);
+    };
 
     return (
         <>
@@ -190,18 +198,15 @@ const Navbar = () => {
                                     ''
                                 )
                             }
-                            {auth ? (
-                                    <li className="nav-item">
-                                        <div className="nav-link"><Logout /></div>
-                                    </li>
-                                )
-                                :
-                                (
-                                    <li className="nav-item">
-                                    <NavLink className="nav-link" to={"/login"}>Войти</NavLink>
+                            {auth && (
+                                <li className="nav-item">
+                                    <button className="btn btn-sm btn-primary" onClick={handleLogout}>Выйти</button>
                                 </li>
-                                )
-                            }
+                            )}
+
+                            {!auth && (
+                                <li className="nav-item"><NavLink className="nav-link" to={"/login"}>Войти</NavLink></li>
+                            )}
 
                         </ul>
                     </div>
