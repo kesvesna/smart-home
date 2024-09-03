@@ -32,12 +32,12 @@ app.post('/register', (req, res) => {
     const { username, password } = req.body;
 
     if(!username || !password) {
-        return res.status(500).json({ message: "Empty credentials" });
+        return res.status(500).json({ message: "Заполните имя и пароль" });
     }
 
     db.get("SELECT * FROM users WHERE username = ?", [username], (err, user) => {
         if (user) {
-            return res.status(500).json({ message: "User already exists" });
+            return res.status(500).json({ message: "Имя уже занято" });
         } else {
             const hashedPassword = bcrypt.hashSync(password, 8);
             const stmt = db.prepare("INSERT INTO users (username, password) VALUES (?, ?)");
@@ -45,9 +45,9 @@ app.post('/register', (req, res) => {
             stmt.run(username, hashedPassword, function (err) {
                 if (err) {
                     logger.error(err);
-                    return res.status(500).json({ message: "Error registering user." });
+                    return res.status(500).json({ message: "Ошибка создания пользователя" });
                 }
-                res.status(201).json({ message: "User registered", id: this.lastID, username });
+                res.status(201).json({ message: "Пользователь создан", id: this.lastID, username });
             });
 
             stmt.finalize();
@@ -61,23 +61,23 @@ app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
     if(!username || !password) {
-    return res.status(500).json({ message: "Empty password or username" });
+    return res.status(500).json({ message: "Заполните имя и пароль" });
     }
 
     db.get("SELECT * FROM users WHERE username = ?", [username], (err, user) => {
 
         if (err || !user) {
-            return res.status(404).json({ message: 'Invalid credentials or user not found' });
+            return res.status(404).json({ message: 'Неверные данные или нет такого пользователя' });
         }
 
         const passwordIsValid = bcrypt.compareSync(password, user.password);
         if (!passwordIsValid) {
             logger.error({message: 'Invalid credentials!'});
-            return res.status(401).json({ accessToken: null, message: "Invalid credentials!" });
+            return res.status(401).json({ accessToken: null, message: "Неверные имя или пароль" });
         }
 
         const token = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: 86400 });  // Expires in 24 hours, 86400 seconds
-        res.status(200).json({ message: "User logged in", id: user.id, username: user.username, accessToken: token });
+        res.status(200).json({ message: "Пользователь вошел", id: user.id, username: user.username, accessToken: token });
     });
 });
 

@@ -12,10 +12,14 @@ const Navbar = () => {
         setAuth(false);
     };
 
+    const navBg = {
+        "backgroundColor": "#e3f2fd"
+    }
+
     return (
         <>
             <div className="container">
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg navbar-scroll" style={navBg}>
                 <div className="container-fluid">
                     <NavLink className="navbar-brand fw-bold fs-4 active-link" to={"/"}>Квартира 42</NavLink>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -149,7 +153,7 @@ const Navbar = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to={"/health/first_aid_kit"}>Аптечка</NavLink>
                             </li>
-                            {auth ? (
+                            {auth && (
                                     <div>
                                         <li className="nav-item dropdown">
                                             <a className="nav-link dropdown-toggle" href="#" role="button"
@@ -188,24 +192,14 @@ const Navbar = () => {
                                                 </li>
                                             </ul>
                                         </li>
-                                    </div>
-                                )
-
-                                :
-                                (
-                                    ''
-                                )
-                            }
-                            {auth && (
                                 <li className="nav-item">
                                     <button className="btn btn-sm btn-primary" onClick={handleLogout}>Выйти</button>
                                 </li>
+                                    </div>
                             )}
-
                             {!auth && (
                                 <li className="nav-item"><NavLink className="nav-link" to={"/login"}>Войти</NavLink></li>
                             )}
-
                         </ul>
                     </div>
                 </div>

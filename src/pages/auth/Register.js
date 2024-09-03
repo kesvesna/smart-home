@@ -37,14 +37,14 @@ const Register = () => {
                                 <input type="text" className="form-control" id="username"
                                        aria-describedby="usernameHelp"
                                        required
-                                       placeholder="Username"
+                                       placeholder="Имя пользователя"
                                        value={username}
                                        onChange={e => setUsername(e.target.value)}
                                 />
                             </div>
                             <div className="mb-3">
                                 <input type="password" className="form-control" id="password" required
-                                       placeholder="Password"
+                                       placeholder="Пароль"
                                        value={password}
                                        onChange={e => setPassword(e.target.value)}
                                 />
