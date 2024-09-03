@@ -6,8 +6,6 @@ const Navbar = () => {
 
     const { auth, setAuth } = useAuth();
 
-    console.log('auth: ', auth);
-
     const handleLogout = () => {
         localStorage.removeItem('accessToken');
         localStorage.removeItem('username');
