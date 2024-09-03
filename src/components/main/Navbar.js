@@ -146,6 +146,31 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                             </li>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button"
+                                   data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Климат
+                                </a>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/all_rooms"}>Все
+                                            помещения</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/kitchen"}>Кухня</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/room_5"}>Комната 5</NavLink>
+                                    </li>
+                                </ul>
+                            </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link "
                                          to={"/power_supply/electrical_panel"}>Электрощит</NavLink>
@@ -154,51 +179,53 @@ const Navbar = () => {
                                 <NavLink className="nav-link" to={"/health/first_aid_kit"}>Аптечка</NavLink>
                             </li>
                             {auth && (
-                                    <div>
-                                        <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle" href="#" role="button"
-                                               data-bs-toggle="dropdown"
-                                               aria-expanded="false">
-                                                Видео
-                                            </a>
-                                            <ul className="dropdown-menu">
-                                                <li>
-                                                    <NavLink className="dropdown-item" to={"/video/all_rooms"}>Все
-                                                        помещения</NavLink>
-                                                </li>
-                                                <li>
-                                                    <hr className="dropdown-divider"/>
-                                                </li>
-                                                <li>
-                                                    <NavLink className="dropdown-item" to={"/video/kitchen"}>Кухня</NavLink>
-                                                </li>
-                                                <li>
-                                                    <hr className="dropdown-divider"/>
-                                                </li>
-                                                <li>
-                                                    <NavLink className="dropdown-item" to={"/video/room_5"}>Комната 5</NavLink>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle" href="#" role="button"
-                                               data-bs-toggle="dropdown"
-                                               aria-expanded="false">
-                                                Пользователи
-                                            </a>
-                                            <ul className="dropdown-menu">
-                                                <li>
-                                                    <NavLink className="dropdown-item" to={"/users/add"}>Добавить</NavLink>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                <li className="nav-item">
-                                    <button className="btn btn-sm btn-primary" onClick={handleLogout}>Выйти</button>
-                                </li>
-                                    </div>
+                                <div>
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle" href="#" role="button"
+                                           data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            Видео
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <NavLink className="dropdown-item" to={"/video/all_rooms"}>Все
+                                                    помещения</NavLink>
+                                            </li>
+                                            <li>
+                                                <hr className="dropdown-divider"/>
+                                            </li>
+                                            <li>
+                                                <NavLink className="dropdown-item" to={"/video/kitchen"}>Кухня</NavLink>
+                                            </li>
+                                            <li>
+                                                <hr className="dropdown-divider"/>
+                                            </li>
+                                            <li>
+                                                <NavLink className="dropdown-item" to={"/video/room_5"}>Комната
+                                                    5</NavLink>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle" href="#" role="button"
+                                           data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            Пользователи
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <NavLink className="dropdown-item" to={"/users/add"}>Добавить</NavLink>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li className="nav-item">
+                                        <button className="btn btn-sm btn-primary" onClick={handleLogout}>Выйти</button>
+                                    </li>
+                                </div>
                             )}
                             {!auth && (
-                                <li className="nav-item"><NavLink className="nav-link" to={"/login"}>Войти</NavLink></li>
+                                <li className="nav-item"><NavLink className="nav-link" to={"/login"}>Войти</NavLink>
+                                </li>
                             )}
                         </ul>
                     </div>
