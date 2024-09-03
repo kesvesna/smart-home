@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
 const Sensor1 = ({room}) => {
+
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -56,7 +57,7 @@ const Sensor1 = ({room}) => {
                 });
             }
 
-            console.log(result);
+            //console.log(result);
 
         } catch (error) {
             setError(error);
@@ -90,6 +91,8 @@ const Sensor1 = ({room}) => {
         </>;
     }
 
+
+
     return (
         <>
             <p></p>
@@ -100,7 +103,8 @@ const Sensor1 = ({room}) => {
                 <span>&nbsp;&nbsp;&nbsp;Влага: </span><span
                 className="fw-bold">{parseFloat((data.sensor_4.value).toFixed(0))}</span>
                 <span>%</span>
-                <span>&nbsp;&nbsp;&nbsp;Газ: </span><span className="fw-bold">{parseFloat(data.sensor_2.value.toFixed(0))}</span>
+                <span>&nbsp;&nbsp;&nbsp;Газ: </span><span
+                className="fw-bold">{parseFloat(data.sensor_2.value.toFixed(0))}</span>
             </p>
             <p className="card-text">
                 <span>Давление: </span><span

@@ -69,9 +69,6 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    {/*<iframe src="http://5.16.20.15:5000" width="468" height="60" align="left">*/}
-                    {/*    Ваш браузер не поддерживает плавающие фреймы!*/}
-                    {/*</iframe>*/}
                 </div>
             }
         </>

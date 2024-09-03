@@ -2,6 +2,13 @@ import React from 'react';
 import Sensor1 from "../../components/sensors/Sensor1";
 
 
+const iframeStyle = {
+    "width": "100%",
+    "border": "none",
+    "overflow": "hidden",
+    "height": "100vh"
+};
+
 const KitchenClimate = () => {
 
     return (
@@ -12,6 +19,8 @@ const KitchenClimate = () => {
                     <Sensor1/>
                 </div>
             </div>
+            {/*<iframe src="//5.16.20.15:62000" id="iframe_sensor_1" style={iframeStyle}>*/}
+            {/*</iframe>*/}
         </div>
     );
 };
