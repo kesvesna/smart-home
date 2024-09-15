@@ -47,9 +47,6 @@ function App() {
                   <Route path={"/duty/room_3"} element={<Room3 roomNumber={3}/>}/>
                   <Route path={"/duty/room_4"} element={<Room4 roomNumber={4}/>}/>
                   <Route path={"/duty/room_5"} element={<Room5 roomNumber={5}/>}/>
-                  <Route path={"/climate/all_rooms"} element={<AllRoomsClimate/>}/>
-                  <Route path={"/climate/kitchen"} element={<KitchenClimate/>}/>
-                  <Route path={"/climate/room_5"} element={<Room5Climate/>}/>
                   <Route path={"/memo/tenant"} element={<Tenant/>}/>
                   <Route path={"/memo/duty"} element={<Duty/>}/>
                   <Route path={"/storage/things"} element={<Things/>}/>

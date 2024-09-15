@@ -5,9 +5,16 @@ const AllRoomsClimate = () => {
 
     return (
         <div>
-            <p></p>
-            <KitchenClimate />
-            <Room5Climate />
+            <div className="container text-center">
+                <div className="row mt-3">
+                    <div className="col-12 col-md-6 mb-3">
+                        <KitchenClimate/>
+                    </div>
+                    <div className="col-12 col-md-6 mb-3">
+                        <Room5Climate/>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

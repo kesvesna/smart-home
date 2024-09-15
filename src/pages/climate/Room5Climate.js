@@ -1,16 +1,14 @@
 import React from 'react';
+import Sensor3 from "../../components/sensors/Sensor3";
 
 
 const Room5Climate = () => {
 
+    const room_name = 'Комната 5';
+
     return (
-        <div className="container">
-            <div className="card mt-2" style={{width: "20rem"}}>
-                <div className="card-body">
-                    <h4 className="card-title">Комната 5:</h4>
-                    <p>Датчик изготавливается</p>
-                </div>
-            </div>
+        <div className="container text-center">
+            <Sensor3 room={room_name}/>
         </div>
     );
 };

@@ -18,7 +18,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="container mb-2">
             <nav className="navbar navbar-expand-lg navbar-scroll" style={navBg}>
                 <div className="container-fluid">
                     <NavLink className="navbar-brand fw-bold fs-4 active-link" to={"/"}>Квартира 42</NavLink>

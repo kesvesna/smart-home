@@ -1,5 +1,6 @@
 import React from 'react';
-import Sensor1 from "../../components/sensors/Sensor1";
+import Sensor2 from "../../components/sensors/Sensor2";
+import Camera1 from "../../components/cameras/Camera1";
 
 
 const iframeStyle = {
@@ -11,18 +12,15 @@ const iframeStyle = {
 
 const KitchenClimate = () => {
 
+
+    const room_name = 'Кухня';
+
     return (
-        <div className="container">
-            <div className="card mt-2" style={{width: "20rem"}}>
-                <div className="card-body">
-                    <h4 className="card-title">Кухня:</h4>
-                    <Sensor1/>
-                </div>
-            </div>
-            {/*<iframe src="//5.16.20.15:62000" id="iframe_sensor_1" style={iframeStyle}>*/}
-            {/*</iframe>*/}
+        <div className="container text-center">
+            <Sensor2 room={room_name}/>
         </div>
-    );
+    )
+        ;
 };
 
 export default KitchenClimate;

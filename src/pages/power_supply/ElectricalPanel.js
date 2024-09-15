@@ -15,7 +15,7 @@ const ElectricalPanel = () => {
                 <li className="list-group-item"></li>
                 <li className="list-group-item"></li>
                 <li className="list-group-item">Розетка в аквариуме (стекляшке)</li>
-                <li className="list-group-item"></li>
+                <li className="list-group-item">43 квартира, комнаты 1 и 2</li>
                 <li className="list-group-item"></li>
                 <li className="list-group-item"></li>
                 <li className="list-group-item">Умывальник</li>
