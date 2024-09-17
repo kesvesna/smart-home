@@ -23,7 +23,7 @@ const Sensor2 = ({room}) => {
 
     const temperatureCalibration = 0;
 
-    const HIGH_GAS_LEVEL_ALARM = 315;
+    const HIGH_GAS_LEVEL_ALARM = 325;
 
     const LOW_HUMIDITY_LEVEL_ALARM = 30;
     const HIGH_HUMIDITY_LEVEL_ALARM = 70;
