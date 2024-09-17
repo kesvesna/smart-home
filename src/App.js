@@ -20,6 +20,8 @@ import FirstAidKit from "./pages/health/firstAidKit";
 import AllRoomsClimate from "./pages/climate/allRoomsClimate";
 import KitchenClimate from "./pages/climate/KitchenClimate";
 import Room5Climate from "./pages/climate/Room5Climate";
+import CorridorClimate from "./pages/climate/CorridorClimate";
+import WashRoomClimate from "./pages/climate/WashRoomClimate";
 import AllRoomsVideo from "./pages/video/allRoomsVideo";
 import KitchenVideo from "./pages/video/KitchenVideo";
 import Room5Video from "./pages/video/Room5Video";
@@ -57,6 +59,8 @@ function App() {
                   <Route path={"/climate/all_rooms"} element={<AllRoomsClimate/>}/>
                   <Route path={"/climate/kitchen"} element={<KitchenClimate/>}/>
                   <Route path={"/climate/room_5"} element={<Room5Climate/>}/>
+                  <Route path={"/climate/corridor"} element={<CorridorClimate/>}/>
+                  <Route path={"/climate/wash_room"} element={<WashRoomClimate/>}/>
 
                   <Route path={"/fines/reasons"} element={<Reasons/>}/>
                   <Route path={"/fines/why"} element={<Why/>}/>

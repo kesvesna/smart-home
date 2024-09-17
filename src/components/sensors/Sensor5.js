@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
-const Sensor3 = ({room}) => {
+const Sensor5 = ({room}) => {
 
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -14,16 +14,16 @@ const Sensor3 = ({room}) => {
     const [pressureAlarm, setPressureAlarm] = useState(false);
 
 
-    const url = process.env.REACT_APP_SENSOR_3_URL;
+    const url = process.env.REACT_APP_SENSOR_5_URL;
 
     const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
     const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID; // Flat_42
 
     const HIGH_TEMPERATURE_ALARM = 32;
 
-    const temperatureCalibration = 1.5;
+    const temperatureCalibration = 0;
 
-    const HIGH_GAS_LEVEL_ALARM = 300;
+    const HIGH_GAS_LEVEL_ALARM = 315;
 
     const LOW_HUMIDITY_LEVEL_ALARM = 30;
     const HIGH_HUMIDITY_LEVEL_ALARM = 70;
@@ -97,7 +97,7 @@ const Sensor3 = ({room}) => {
         // Set up an interval to fetch data every 5 seconds
         const intervalId = setInterval(() => {
             fetchData();
-        }, 6000);
+        }, 7000);
 
         // Cleanup the interval on component unmount
         return () => clearInterval(intervalId);
@@ -166,4 +166,4 @@ const Sensor3 = ({room}) => {
     );
 };
 
-export default Sensor3;
+export default Sensor5;

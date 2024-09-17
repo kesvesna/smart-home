@@ -82,7 +82,7 @@ const Sensor1 = ({room}) => {
         // Set up an interval to fetch data every 5 seconds
         const intervalId = setInterval(() => {
             fetchData();
-        }, 7100);
+        }, 5000);
 
         // Cleanup the interval on component unmount
         return () => clearInterval(intervalId);

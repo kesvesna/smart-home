@@ -169,6 +169,18 @@ const Navbar = () => {
                                     <li>
                                         <NavLink className="dropdown-item" to={"/climate/room_5"}>Комната 5</NavLink>
                                     </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/corridor"}>Коридор</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/wash_room"}>Умывальник</NavLink>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="nav-item">

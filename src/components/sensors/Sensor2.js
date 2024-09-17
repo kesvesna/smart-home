@@ -19,11 +19,11 @@ const Sensor2 = ({room}) => {
     const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_TOKEN;
     const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID; // Flat_42
 
-    const HIGH_TEMPERATURE_ALARM = 32;
+    const HIGH_TEMPERATURE_ALARM = 30;
 
     const temperatureCalibration = 0;
 
-    const HIGH_GAS_LEVEL_ALARM = 270;
+    const HIGH_GAS_LEVEL_ALARM = 315;
 
     const LOW_HUMIDITY_LEVEL_ALARM = 30;
     const HIGH_HUMIDITY_LEVEL_ALARM = 70;
@@ -97,7 +97,7 @@ const Sensor2 = ({room}) => {
         // Set up an interval to fetch data every 5 seconds
         const intervalId = setInterval(() => {
             fetchData();
-        }, 7000);
+        }, 5500);
 
         // Cleanup the interval on component unmount
         return () => clearInterval(intervalId);
