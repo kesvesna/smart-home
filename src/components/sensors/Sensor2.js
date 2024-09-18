@@ -21,7 +21,7 @@ const Sensor2 = ({room}) => {
 
     const HIGH_TEMPERATURE_ALARM = 30;
 
-    const temperatureCalibration = 0;
+    const temperatureCalibration = 0.5;
 
     const HIGH_GAS_LEVEL_ALARM = 325;
 
