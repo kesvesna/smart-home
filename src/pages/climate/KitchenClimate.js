@@ -1,5 +1,5 @@
 import React from 'react';
-import Sensor2 from "../../components/sensors/Sensor2";
+import Sensor from "../../components/sensors/Sensor";
 import Camera1 from "../../components/cameras/Camera1";
 
 
@@ -13,12 +13,12 @@ const iframeStyle = {
 const KitchenClimate = () => {
 
     const url = process.env.REACT_APP_SENSOR_2_URL;
-    const tempCalibration = 2;
+    const tempCalibration = 1.5;
     const room_name = 'Кухня';
 
     return (
         <div className="container text-center">
-            <Sensor2 room={room_name} url={url} tempCalibration={tempCalibration}/>
+            <Sensor room={room_name} url={url} tempCalibration={tempCalibration} />
         </div>
     )
         ;

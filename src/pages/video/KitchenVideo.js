@@ -1,6 +1,5 @@
 import React from 'react';
 import Camera1 from "../../components/cameras/Camera1";
-import Sensor1 from "../../components/sensors/Sensor1";
 
 
 const KitchenVideo = () => {
@@ -11,7 +10,6 @@ const KitchenVideo = () => {
                 <div className="card-body">
                     <p>В разработке</p>
                     <h4 className="card-title">Кухня:</h4>
-                    <Sensor1 room={"Кухня"}/>
                     <Camera1/>
                 </div>
             </div>

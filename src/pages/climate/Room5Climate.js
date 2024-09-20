@@ -1,14 +1,16 @@
 import React from 'react';
-import Sensor3 from "../../components/sensors/Sensor3";
+import Sensor from "../../components/sensors/Sensor";
 
 
 const Room5Climate = () => {
 
     const room_name = 'Комната 5';
+    const url = process.env.REACT_APP_SENSOR_3_URL;
+    const tempCalibration = 2.5;
 
     return (
         <div className="container text-center">
-            <Sensor3 room={room_name}/>
+            <Sensor room={room_name} url={url} tempCalibration={tempCalibration} />
         </div>
     );
 };

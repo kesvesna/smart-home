@@ -3,6 +3,8 @@ import sendTelegramNotification from "../../../notifications/TelegramNotificatio
 const HIGH_TEMPERATURE_ALARM = 30;
 const HIGH_GAS_LEVEL_ALARM = 400;
 const LOW_HUMIDITY_LEVEL_ALARM = 30;
+const HIGH_HUMIDITY_LEVEL_ALARM = 80;
+const LOW_PRESSURE_LEVEL_ALARM = 740;
 
 const checkAlarms = (result, room) => {
 
@@ -20,6 +22,11 @@ const checkAlarms = (result, room) => {
 
     if (parseInt(result.sensor_4.value) < LOW_HUMIDITY_LEVEL_ALARM) {
         sendTelegramNotification(`${room}, низкая влажность: ${parseInt(result.sensor_4.value)}`);
+        newAlarms.humidity = true;
+    }
+
+    if (parseInt(result.sensor_4.value) > HIGH_HUMIDITY_LEVEL_ALARM) {
+        sendTelegramNotification(`${room}, высокая влажность: ${parseInt(result.sensor_4.value)}`);
         newAlarms.humidity = true;
     }
 

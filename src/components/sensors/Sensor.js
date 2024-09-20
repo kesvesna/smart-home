@@ -5,7 +5,8 @@ import ErrorView from "./layouts/ErrorView";
 import fetchSensorData from "./FetchSensorData";
 import checkAlarms from "./alarms/CheckAlarms";
 
-const Sensor2 = ({ room, url, tempCalibration }) => {
+const Sensor = ({ room, url, tempCalibration }) => {
+
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -48,4 +49,4 @@ const Sensor2 = ({ room, url, tempCalibration }) => {
     );
 };
 
-export default Sensor2;
+export default Sensor;
