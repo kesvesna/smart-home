@@ -13,7 +13,7 @@ const iframeStyle = {
 const KitchenClimate = () => {
 
     const url = process.env.REACT_APP_SENSOR_2_URL;
-    const tempCalibration = 1.5;
+    const tempCalibration = 3.0;
     const room_name = 'Кухня';
 
     return (

@@ -18,6 +18,7 @@ const Reasons = () => {
                 <li className="list-group-item">Просрочка платежа без уведомления арендодателя, увеличение платы
                     на весь срок проживания
                 </li>
+                <li className="list-group-item">Не успели сделать уборку по графику и никого об этом не предупредили</li>
                 <li className="list-group-item">Гость после 22:00</li>
                 <li className="list-group-item">Оскорбление жильцов</li>
                 <li className="list-group-item">Приготовление пищи в комнате</li>

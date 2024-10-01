@@ -56,6 +56,7 @@ const Tenant = () => {
                 <li className="list-group-item">
                     Балкон для сушки белья, не надо на нем устраивать свалку коробок и прочего барахла.
                 </li>
+                <li className="list-group-item">Не успеваете сделать уборку по графику предупредите об этом следующего дежурного или арендодателя.</li>
                 <li className="list-group-item">
                     <ul className="list-group">
                         <li className="list-group-item border-danger border-2" style={headerStyle}>

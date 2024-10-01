@@ -2,10 +2,10 @@ import React from 'react';
 import Sensor from "../../components/sensors/Sensor";
 
 
-const WashRoomClimate = () => {
+const Room4Climate = () => {
 
-    const room_name = 'Умывальник';
-    const url = process.env.REACT_APP_SENSOR_5_URL;
+    const room_name = 'Комната 4';
+    const url = process.env.REACT_APP_SENSOR_7_URL;
     const tempCalibration = 4.0;
 
     return (
@@ -15,4 +15,4 @@ const WashRoomClimate = () => {
     );
 };
 
-export default WashRoomClimate;
+export default Room4Climate;
