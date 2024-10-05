@@ -161,7 +161,25 @@ const Navbar = () => {
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <NavLink className="dropdown-item" to={"/climate/kitchen"}>Кухня</NavLink>
+                                        <NavLink className="dropdown-item" to={"/climate/room_1"}>Комната 1</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/room_2"}>Комната 2</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/room_3"}>Комната 3</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/room_4"}>Комната 4</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
@@ -173,13 +191,26 @@ const Navbar = () => {
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
+                                        <NavLink className="dropdown-item" to={"/climate/room_6"}>Комната 6</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to={"/climate/kitchen"}>Кухня</NavLink>
+                                    </li>
+                                    <li>
+                                        <hr className="dropdown-divider"/>
+                                    </li>
+                                    <li>
                                         <NavLink className="dropdown-item" to={"/climate/corridor"}>Коридор</NavLink>
                                     </li>
                                     <li>
                                         <hr className="dropdown-divider"/>
                                     </li>
                                     <li>
-                                        <NavLink className="dropdown-item" to={"/climate/wash_room"}>Умывальник</NavLink>
+                                        <NavLink className="dropdown-item"
+                                                 to={"/climate/wash_room"}>Умывальник</NavLink>
                                     </li>
                                 </ul>
                             </li>
