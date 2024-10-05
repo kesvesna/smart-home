@@ -5,6 +5,7 @@ import Room1Climate from "./Room1Climate";
 import Room4Climate from "./Room4Climate";
 import Room3Climate from "./Room3Climate";
 import Room2Climate from "./Room2Climate";
+import Room6Climate from "./Room6Climate";
 import CorridorClimate from "./CorridorClimate";
 import WashRoomClimate from "./WashRoomClimate";
 
@@ -31,10 +32,13 @@ const AllRoomsClimate = () => {
                     <div className="col-12 col-md-4 mb-3">
                         <Room5Climate/>
                     </div>
+                    <div className="col-12 col-md-4 mb-3">
+                        <Room6Climate/>
+                    </div>
                 </div>
                 <div className="row mt-3">
                     <div className="col-12 col-md-4 mb-3">
-                        <KitchenClimate/>
+                    <KitchenClimate/>
                     </div>
                     <div className="col-12 col-md-4 mb-3">
                         <WashRoomClimate/>
