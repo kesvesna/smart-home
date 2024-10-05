@@ -31,9 +31,6 @@ const AllRoomsClimate = () => {
                     <div className="col-12 col-md-4 mb-3">
                         <Room5Climate/>
                     </div>
-                    <div className="col-12 col-md-4 mb-3">
-                        <CorridorClimate/>
-                    </div>
                 </div>
                 <div className="row mt-3">
                     <div className="col-12 col-md-4 mb-3">
@@ -41,6 +38,9 @@ const AllRoomsClimate = () => {
                     </div>
                     <div className="col-12 col-md-4 mb-3">
                         <WashRoomClimate/>
+                    </div>
+                    <div className="col-12 col-md-4 mb-3">
+                        <CorridorClimate/>
                     </div>
                 </div>
             </div>
