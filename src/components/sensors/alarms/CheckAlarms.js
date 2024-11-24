@@ -2,7 +2,7 @@ import sendTelegramNotification from "../../../notifications/TelegramNotificatio
 
 const HIGH_TEMPERATURE_ALARM = 32;
 const HIGH_GAS_LEVEL_ALARM = 525;
-const LOW_HUMIDITY_LEVEL_ALARM = 25;
+const LOW_HUMIDITY_LEVEL_ALARM = 22;
 const HIGH_HUMIDITY_LEVEL_ALARM = 80;
 const LOW_PRESSURE_LEVEL_ALARM = 740;
 
