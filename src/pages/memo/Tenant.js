@@ -22,6 +22,9 @@ const Tenant = () => {
                     Уборку делаем только в том туалете, в который ходим.
                 </li>
                 <li className="list-group-item">
+                    Готовьтесь пожалуйста к уборке заранее. Не надо в день уборки рассказывать, что у вас нет ведра или швабры.
+                </li>
+                <li className="list-group-item">
                     Стиральная машина на кухне для комнат №1, №2, №3, №4.
                 </li>
                 <li className="list-group-item">
@@ -56,7 +59,9 @@ const Tenant = () => {
                 <li className="list-group-item">
                     Балкон для сушки белья, не надо на нем устраивать свалку коробок и прочего барахла.
                 </li>
-                <li className="list-group-item">Не успеваете сделать уборку по графику предупредите об этом следующего дежурного или арендодателя.</li>
+                <li className="list-group-item">Не успеваете сделать уборку по графику предупредите об этом следующего
+                    дежурного или арендодателя.
+                </li>
                 <li className="list-group-item">
                     <ul className="list-group">
                         <li className="list-group-item border-danger border-2" style={headerStyle}>
