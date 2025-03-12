@@ -101,18 +101,6 @@ const Navbar = () => {
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                    aria-expanded="false">
-                                    Мытье
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li>
-                                        <NavLink className="dropdown-item" to={"/washing/shower_cabin"}>Душевая
-                                            кабинка</NavLink>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                   aria-expanded="false">
                                     Хранение
                                 </a>
                                 <ul className="dropdown-menu">
@@ -220,6 +208,10 @@ const Navbar = () => {
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to={"/health/first_aid_kit"}>Аптечка</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link "
+                                         to={"/for_very_smart/smart_rules"}>Для самых умных</NavLink>
                             </li>
                             {auth && (
                                 <div>

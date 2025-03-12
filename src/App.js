@@ -13,7 +13,7 @@ import Room5 from "./pages/duty/Room5";
 import Navbar from "./components/main/Navbar";
 import Tenant from "./pages/memo/Tenant";
 import Duty from "./pages/memo/Duty";
-import ShowerCabin from "./pages/washing/showerCabin";
+import SmartRules from "./pages/for_very_smart/smartRules";
 import Things from "./pages/storage/Things";
 import Shoes from "./pages/storage/Shoes";
 import FirstAidKit from "./pages/health/firstAidKit";
@@ -58,7 +58,7 @@ function App() {
                   <Route path={"/memo/duty"} element={<Duty/>}/>
                   <Route path={"/storage/things"} element={<Things/>}/>
                   <Route path={"/storage/shoes"} element={<Shoes/>}/>
-                  <Route path={"/washing/shower_cabin"} element={<ShowerCabin/>}/>
+                  <Route path={"/for_very_smart/smart_rules"} element={<SmartRules/>}/>
                   <Route path={"/power_supply/electrical_panel"} element={<ElectricalPanel/>}/>
                   <Route path={"/health/first_aid_kit"} element={<FirstAidKit/>}/>
                   <Route path={"/climate/all_rooms"} element={<AllRoomsClimate/>}/>
