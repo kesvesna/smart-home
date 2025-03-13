@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Home from './pages/main/Home';
 import Login from './pages/auth/Login';
@@ -34,7 +34,7 @@ import ElectricalPanel from "./pages/power_supply/ElectricalPanel";
 import Reasons from "./pages/fines/Reasons";
 import Why from "./pages/fines/Why";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import {AuthProvider, useAuth} from "./contexts/AuthContext";
+import {AuthProvider} from "./contexts/AuthContext";
 import Logout from "./pages/auth/Logout";
 
 

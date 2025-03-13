@@ -39,7 +39,8 @@ const Duty = () => {
                     data-bs-target="#shower">
                 Душевая
             </button>
-
+            <hr/>
+            <p>Если что-то непонятно или не получается, спросите у арендодателя или соседей.</p>
 
             <div className="modal fade" id="kitchen" tabIndex="-1" aria-labelledby="labelKitchen"
                  aria-hidden="true">
@@ -51,7 +52,7 @@ const Duty = () => {
                                     aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            Моем пол, раковины, краны, плиту, протираем подоконник
+                            Подметаем пол, моем пол, раковины, краны, плиту, протираем подоконник
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -71,7 +72,8 @@ const Duty = () => {
                         </div>
                         <div className="modal-body">
                             <p>Только свой туалет</p>
-                            <p>Моем пол, унитаз, бачок</p>
+                            <p>Подметаем пол, моем пол, унитаз, бачок</p>
+                            <p>В унитазе после уборки не должно быть желтых подтеков и пятен</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -90,8 +92,7 @@ const Duty = () => {
                                     aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <p>Моем пол, раковины, зеркала, краны</p>
-                            <p>В душевую кабинку налить воды ведро</p>
+                            <p>Подметаем пол, моем пол, раковины, зеркала, краны</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -110,8 +111,8 @@ const Duty = () => {
                                     aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <p>Моем пол, зеркала, коврик, места под обувью</p>
-                            <p>Входную дверь по необходимости</p>
+                            <p>Подметаем пол, моем пол, зеркала, коврик, места под обувью</p>
+                            <p>Входную железную дверь моем по необходимости</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -134,6 +135,7 @@ const Duty = () => {
                             <p>Шторку замачиваем на пару часов (вода, соль 3 ст. ложки, порошок 1 ст. ложка, белизна 2
                                 колпачка, сода)</p>
                             <p>Потом стираем в любой машинке</p>
+                            <p>После уборки на стенах не должно быть желтых подтеков и пятен</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -141,7 +143,6 @@ const Duty = () => {
                     </div>
                 </div>
             </div>
-            <br/>
             <br/>
             <a href="javascript:history.back()" className="btn btn-success btn-lg btn-sm mb-2">Назад</a>
         </div>

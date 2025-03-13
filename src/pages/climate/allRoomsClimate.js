@@ -11,6 +11,9 @@ import WashRoomClimate from "./WashRoomClimate";
 
 const AllRoomsClimate = () => {
 
+
+
+
     return (
         <div>
             <div className="container text-center">
