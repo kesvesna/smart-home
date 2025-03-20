@@ -69,7 +69,7 @@ const Tenant = () => {
                 <li className="list-group-item">
                     <ul className="list-group">
                         <li className="list-group-item border-danger border-2" style={headerStyle}>
-                            Запрещено:
+                            <b>Запрещено:</b>
                         </li>
                         <li className="list-group-item border-danger border-2">
                             Приготовление пищи в комнате, для этого есть кухня.
@@ -79,6 +79,9 @@ const Tenant = () => {
                         </li>
                         <li className="list-group-item border-danger border-2">
                             Курить в квартире, без разницы что это.
+                        </li>
+                        <li className="list-group-item border-danger border-2">
+                            Ароматерапия, свечи, палочки.
                         </li>
                         <li className="list-group-item border-danger border-2">
                             Спать на матрасе без постельного белья.
