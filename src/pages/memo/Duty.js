@@ -6,9 +6,14 @@ const Duty = () => {
     return (
         <div className="container">
             <p></p>
+            <p>Готовьтесь к уборке заранее.</p>
+            <p>Тряпка, швабра, ведро, губки, резиновые перчатки, бытовая химия.</p>
+            <p>Если у Вас нет метелки и совка, можно взять у арендодателя их или пылесос.</p>
+            <p>Пылесос после уборки необходимо почистить и помыть.</p>
+            <p></p>
             <h6>На неделе две уборки</h6>
             <hr/>
-            <h6>Первая - в среду или четверг</h6>
+            <h6>Первая - в среду(вечер) или четверг</h6>
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kitchen">
                 Кухня
             </button>
@@ -17,7 +22,7 @@ const Duty = () => {
             </button>
 
             <hr/>
-            <h6>Вторая - в субботу или воскресенье</h6>
+            <h6>Вторая - в воскресенье(вечер) или понедельник(утро)</h6>
 
             <button type="button" className="btn btn-primary me-2 mb-2" data-bs-toggle="modal"
                     data-bs-target="#kitchen">
